@@ -33,14 +33,14 @@ Follow the prompts in the terminal to creat your file in the "output" folder.
 
 Your generated file will use pre-existing template:
 
-![preview](./assets/screenshot.png)
+![preview](./assets/images/screenshot.png)
 
 
 ## Tests
 
 Application uses Jest for testing. 
 
-![tests-passing](./assets/tests-passed.png)
+![tests-passing](./assets/images/tests-passed.png)
 
 ## Tools
 
