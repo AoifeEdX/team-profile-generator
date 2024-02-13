@@ -1,12 +1,10 @@
 # Team profile generator
 
-![License](https://img.shields.io/badge/license-UNLICENCED-3558AE.svg?labelColor=2F2E32&style=for-the-badge&logo=simple-icons)
-
 ### [Deployed site](https://AoifeEdX.github.io/team-profile-generator/)
 
 ## About
 
-eam Profile Genrator can be used to create a webpage that displays essential information about a software engineering team's employees, like their job level, IDs, emails and GitHub profiles.
+Team Profile Genrator can be used to create a webpage that displays essential information about a software engineering team's employees, like their job level, IDs, emails and GitHub profiles.
 
 ## Installation
 
