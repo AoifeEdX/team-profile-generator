@@ -1,6 +1,6 @@
 # Team profile generator
 
-### [Deployed site](https://AoifeEdX.github.io/team-profile-generator/)
+### [View example webpage](https://AoifeEdX.github.io/team-profile-generator/)
 
 ## About
 
