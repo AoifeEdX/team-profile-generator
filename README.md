@@ -38,7 +38,7 @@ Your generated file will use pre-existing template:
 
 Application uses Jest for testing. 
 
-![tests-passing](./assets/images/tests-passed.png)
+![tests-passing](./assets/images/tests_passed.png)
 
 ## Tools
 
