@@ -1,48 +1,53 @@
 # Team profile generator
 
-### [View example webpage](https://AoifeEdX.github.io/team-profile-generator/)
+### [View Example Webpage](https://AoifeEdX.github.io/team-profile-generator/)
 
 ## About
 
-Team Profile Genrator can be used to create a webpage that displays essential information about a software engineering team's employees, like their job level, IDs, emails and GitHub profiles.
+The Team Profile Generator is a tool designed to create a webpage that showcases essential information about a software engineering team's employees, including their job roles, IDs, emails, and GitHub profiles.
 
 ## Installation
 
-Fork the repository and clone it to your local environment with:
+To get started, follow these steps:
+
+1. Fork the repository and clone it to your local environment:
 
 ```
 git clone git@github.com:<user>/team-profile-generator.git
 ```
 
-Install necessary dependencies with:
+2. Install necessary dependencies:
 
 ```
-npm i
+npm install
 ```
+
 
 ## Usage
 
-Invoke the app in the root directory of the application with the following terminal command:
+To use the application, navigate to the root directory of the project and run the following command in your terminal:
 
 ```
 node index.js
 ```
-Follow the prompts in the terminal to creat your file in the "output" folder.
+Follow the prompts in the terminal to generate your team profile file, which will be saved in the "output" folder.
 
-Your generated file will use pre-existing template:
+The generated file will use a predefined template.
+
+Here is an example of what it will look like:
 
 ![preview](./assets/images/screenshot.png)
 
 
 ## Tests
 
-Application uses Jest for testing. 
+The application utilizes Jest for testing, ensuring its reliability and functionality.
 
 ![tests-passing](./assets/images/tests_passed.png)
 
 ## Tools
 
-- [Inquirer](https://www.npmjs.com/package/inquirer)
+- [Inquirer](https://www.npmjs.com/package/inquirer): A powerful library for collecting user input in command-line interfaces.
 
 ## License
 
