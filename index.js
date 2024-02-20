@@ -15,7 +15,7 @@ const render = require('./src/page-template.js');
 
 // Utility functions for input validation
 const validateEmail = (email) => {
-	const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+	const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/; // Checks that input is an email format
 	return emailRegex.test(email) || 'Please enter a valid email address';
 };
 
