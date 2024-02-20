@@ -1,3 +1,4 @@
+// Importing required modules and classes
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -5,12 +6,14 @@ const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
 
+// Setting up output directory and file path
 const OUTPUT_DIR = path.resolve(__dirname, 'output');
 const outputPath = path.join(OUTPUT_DIR, 'team-profile.html');
 
+// Importing HTML rendering function
 const render = require('./src/page-template.js');
 
-// utility fn for validation
+// Utility functions for input validation
 const validateEmail = (email) => {
 	const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 	return emailRegex.test(email) || 'Please enter a valid email address';
@@ -20,12 +23,13 @@ const validateNumber = (number) => {
 	return Number.isInteger(Number(number)) || 'Please enter a valid number';
 };
 
-// team object
+// Object to store team information
 const team = {
 	teamName: '',
 	teamMembers: [],
 };
 
+// Function to prompt for team name
 const teamName = () => {
 	inquirer
 		.prompt([
@@ -44,7 +48,7 @@ const teamName = () => {
 		});
 };
 
-
+// Function to create manager
 const createManager = () => {
 	inquirer
 		.prompt([
@@ -78,6 +82,7 @@ const createManager = () => {
 		});
 };
 
+// Function to prompt for adding more employees
 const addEmployee = () => {
 	inquirer
 		.prompt([
@@ -103,6 +108,7 @@ const addEmployee = () => {
 		});
 };
 
+// Function to create employee based on role
 const createEmployee = (role, EmployeeType) => {
 	inquirer
 		.prompt([
@@ -154,6 +160,7 @@ const createEmployee = (role, EmployeeType) => {
 		});
 };
 
+// Function to generate HTML file with team profile
 const generateFile = () => {
 	const html = render(team);
 	fs.writeFile(outputPath, html, (err) => {
@@ -162,6 +169,7 @@ const generateFile = () => {
 	});
 };
 
+// Function to initialize the application
 const init = () => {
 	inquirer
 		.prompt([
@@ -177,4 +185,6 @@ const init = () => {
 			}
 		});
 };
+
+// Initializing the application
 init();

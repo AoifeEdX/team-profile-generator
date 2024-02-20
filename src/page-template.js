@@ -1,13 +1,11 @@
-// Import any necessary modules
-// Define your generateTeam function and other helper functions here
-// Make sure the function generates HTML content for each team member and injects it into the designated placeholder in the HTML file
-
-// creates the team
+// Import the necessary file system module
 const fs = require('fs');
 
+// Function to generate HTML content for each team member
 const generateTeam = (team) => {
-  // creates the manager html
+  // Function to generate HTML for a manager
   const generateManager = (manager) => {
+    // HTML markup for the manager card
     return `
     <div class="card employee-card col-md-8 m-2">
         <!-- Manager Card Example -->
@@ -28,8 +26,9 @@ const generateTeam = (team) => {
     </div>`;
   };
 
-  // creates the html for engineers
+  // Function to generate HTML for an engineer
   const generateEngineer = (engineer) => {
+    // HTML markup for the engineer card
     return `
     <div class="card employee-card col-md-4 m-2">
         <!-- Engineer Card Example -->
@@ -50,8 +49,9 @@ const generateTeam = (team) => {
     </div>`;
   };
 
-  // creates the html for interns
+  // Function to generate HTML for an intern
   const generateIntern = (intern) => {
+    // HTML markup for the intern card
     return `
     <div class="card employee-card col-md-4 m-2">
         <!-- Intern Card Example -->
@@ -72,18 +72,25 @@ const generateTeam = (team) => {
     </div>`;
   };
 
+  // Array to store HTML fragments for each team member
   const html = [];
+
+  // Push HTML for managers to the array
   html.push(
     team.teamMembers
       .filter((employee) => employee.getRole() === 'Manager')
       .map((manager) => generateManager(manager))
   );
+
+  // Push HTML for engineers to the array
   html.push(
     team.teamMembers
       .filter((employee) => employee.getRole() === 'Engineer')
       .map((engineer) => generateEngineer(engineer))
       .join('')
   );
+
+  // Push HTML for interns to the array
   html.push(
     team.teamMembers
       .filter((employee) => employee.getRole() === 'Intern')
@@ -91,11 +98,13 @@ const generateTeam = (team) => {
       .join('')
   );
 
+  // Return joined HTML fragments for all team members
   return html.join('');
 };
 
-// exports function to generate entire page
+// Export function to generate the entire HTML page
 module.exports = (team) => {
+  // HTML markup for the entire page
   return `
 <!DOCTYPE html>
 <html lang="en">
